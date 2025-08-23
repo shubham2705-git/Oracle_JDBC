@@ -38,6 +38,6 @@ public class TotalAndAverageSalary {
             }catch(SQLException ex){
              System.out.println("Exception in closing the connection:"+ex.getMessage());  
             }
-        }
+       }
     }
 }
