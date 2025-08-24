@@ -18,7 +18,7 @@ public class InsertValuesDynamically {
         String name =  kb.next();
         
         System.out.println("Enter Salary");
-        double amt = kb.nextInt();
+        double amt = kb.nextDouble();
         
         System.out.println("Enter depno");
         int dno = kb.nextInt();
