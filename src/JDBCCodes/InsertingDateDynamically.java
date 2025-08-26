@@ -43,6 +43,7 @@ public class InsertingDateDynamically {
             int ans;
             ans = ps.executeUpdate();
             System.out.println("Record Inserted:"+ans);
+            System.out.println("Record Inserted:"+ans);
             
             
         }catch(SQLException ex){
