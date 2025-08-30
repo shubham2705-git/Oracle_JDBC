@@ -54,7 +54,7 @@ public class BatchUpdateExample {
                     System.out.println("Disconnect successfully to the DB");
                 }
             }catch(SQLException ex){
-             System.out.println("Exception in closing the connection::"+ex.getMessage());  
+             System.out.println("Exception in closing the connection:"+ex.getMessage());  
             }
         }
     }
