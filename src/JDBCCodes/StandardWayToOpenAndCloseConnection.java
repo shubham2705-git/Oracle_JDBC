@@ -14,7 +14,7 @@ public class StandardWayToOpenAndCloseConnection {
              conn = DriverManager.getConnection("jdbc:oracle:thin:@//Shubham-Rj:1521/xe","advjavabatch2","mystudents");
             System.out.println("Connected to the DB");
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("Select ename,sal from employeees where deptno=10");
+            ResultSet rs = st.executeQuery("Select ename,sal from employees where deptno=30");
             while(rs.next())
             {
                 String ename = rs.getString(1);
