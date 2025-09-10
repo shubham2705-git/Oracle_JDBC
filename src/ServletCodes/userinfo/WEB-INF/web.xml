@@ -1,0 +1,13 @@
+<web-app>
+
+ <servlet>
+     <servlet-class> UserInfoServlet</servlet-class>
+     <servlet-name>UserInfoServlet</servlet-name>
+</servlet>
+
+<servlet-mapping>
+      <servlet-name>UserInfoServlet</servlet-name>
+      <url-pattern>/UserInfoServlet</url-pattern>
+</servlet-mapping>
+
+</web-app>
