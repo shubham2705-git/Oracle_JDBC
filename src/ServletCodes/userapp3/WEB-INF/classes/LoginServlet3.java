@@ -19,11 +19,7 @@ public class LoginServlet3 extends HttpServlet {
 		String pwd=ctxt.getInitParameter("dbpwd");
 		String qry=cfg.getInitParameter("qry"); 
         try {
-            conn = DriverManager.getConnection(
-                "connurl",
-                "dbusername",
-                "pwd"
-            );
+           conn = DriverManager.getConnection(connurl,dbusername,pwd);
             System.out.println("Connected to the DB");
             ps = conn.prepareStatement(qry);
         } catch (SQLException sq) {
