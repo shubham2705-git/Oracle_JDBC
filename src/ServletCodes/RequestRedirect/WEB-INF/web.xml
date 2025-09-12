@@ -1,0 +1,49 @@
+<web-app>
+<listener>
+	      <listener-class>MyDBListener</listener-class>
+	</listener>
+<context-param>
+	<param-name>connurl</param-name>
+	<param-value>jdbc:oracle:thin:@//Shubham-Rj:1521/xe</param-value>
+</context-param>
+
+<context-param>
+	<param-name>dbusername</param-name>
+	<param-value>advjavabatch2</param-value>
+</context-param>
+
+<context-param>
+    <param-name>dbpwd</param-name>
+	<param-value>mystudents</param-value>
+</context-param>
+
+
+ <servlet>
+     <servlet-class> SendRedirect</servlet-class>
+     <servlet-name>SendRedirect</servlet-name>
+	 <init-param>
+		<param-name>qry</param-name>
+		<param-value>select username from users where userid=? and password=?</param-value>
+	 </init-param>
+</servlet>
+
+<servlet-mapping>
+      <servlet-name>SendRedirect</servlet-name>
+      <url-pattern>/SendRedirect</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+     <servlet-class> RegistrationServlet4</servlet-class>
+     <servlet-name>RegistrationServlet4</servlet-name>
+	 <init-param>
+		<param-name>qry</param-name>
+		<param-value>insert into users values(?,?,?)</param-value>
+	</init-param>
+</servlet>
+
+<servlet-mapping>
+      <servlet-name>RegistrationServlet4</servlet-name>
+      <url-pattern>/RegistrationServlet4</url-pattern>
+</servlet-mapping>
+
+</web-app>
